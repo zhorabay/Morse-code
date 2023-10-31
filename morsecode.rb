@@ -1,17 +1,15 @@
-# Define a hash that maps Morse code to English characters
-MORSE_TO_ENGLISH = {
-  '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D',
-  '.' => 'E', '..-.' => 'F', '--.' => 'G', '....' => 'H',
-  '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L',
-  '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P',
-  '--.-' => 'Q', '.-.' => 'R', '...' => 'S', '-' => 'T',
-  '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X',
-  '-.--' => 'Y', '--..' => 'Z'
-}
-
 # Method to decode a Morse code character
 def decode_char(morse)
-  MORSE_TO_ENGLISH[morse]
+  morse_to_english = {
+    '.-' => 'A', '-...' => 'B', '-.-.' => 'C', '-..' => 'D',
+    '.' => 'E', '..-.' => 'F', '--.' => 'G', '....' => 'H',
+    '..' => 'I', '.---' => 'J', '-.-' => 'K', '.-..' => 'L',
+    '--' => 'M', '-.' => 'N', '---' => 'O', '.--.' => 'P',
+    '--.-' => 'Q', '.-.' => 'R', '...' => 'S', '-' => 'T',
+    '..-' => 'U', '...-' => 'V', '.--' => 'W', '-..-' => 'X',
+    '-.--' => 'Y', '--..' => 'Z'
+  }
+  morse_to_english[morse]
 end
 
 # Method to decode an entire word in Morse code
