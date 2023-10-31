@@ -14,7 +14,7 @@ end
 
 # Method to decode an entire word in Morse code
 def decode_word(morse_word)
-  morse_word.split(' ').map { |morse_char| decode_char(morse_char) }.join('')
+  morse_word.split.map { |morse_char| decode_char(morse_char) }.join
 end
 
 # Method to decode the entire message in Morse code
@@ -25,6 +25,6 @@ def decode(message)
 end
 
 # Test the decoding
-message = ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+message = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 decoded_message = decode(message)
 puts decoded_message
